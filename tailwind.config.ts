@@ -132,6 +132,48 @@ export default {
 					'50%': {
 						transform: 'translateY(-20px)'
 					}
+				},
+				fragment: {
+					'0%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(0.8) rotate(180deg)',
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'scale(0.2) rotate(360deg) translateX(var(--fragment-x, 0)) translateY(var(--fragment-y, 0))',
+						opacity: '0'
+					}
+				},
+				assemble: {
+					'0%': {
+						transform: 'scale(0.2) rotate(360deg) translateX(var(--start-x, 0)) translateY(var(--start-y, 0))',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1) rotate(0deg) translateX(0) translateY(0)',
+						opacity: '1'
+					}
+				},
+				avatarRise: {
+					'0%': {
+						transform: 'translateY(100px) scale(0.8)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0) scale(1)',
+						opacity: '1'
+					}
+				},
+				glowPulse: {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.6)'
+					}
 				}
 			},
 			animation: {
@@ -141,7 +183,11 @@ export default {
 				'fade-in-left': 'fadeInLeft 0.6s ease-out',
 				'fade-in-right': 'fadeInRight 0.6s ease-out',
 				'scale-in': 'scaleIn 0.4s ease-out',
-				'float': 'float 6s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'fragment': 'fragment 2.5s ease-out forwards',
+				'assemble': 'assemble 1.5s ease-out forwards',
+				'avatar-rise': 'avatarRise 1s ease-out forwards',
+				'glow-pulse': 'glowPulse 2s ease-in-out infinite'
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
