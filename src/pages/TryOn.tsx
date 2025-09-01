@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { VRScene } from '@/components/vr/VRScene';
+import { VRTryOn } from '@/components/VRTryOn';
 
 export default function TryOn() {
   return (
@@ -18,7 +18,7 @@ export default function TryOn() {
             </p>
           </div>
 
-          <VRScene />
+          <VRTryOn />
         </motion.div>
       </div>
     </div>
