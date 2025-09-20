@@ -59,6 +59,67 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- A-Frame (for VR/3D scenes)
+- Supabase (backend and authentication)
+
+## VR Try-On Feature
+
+This project includes a VR try-on experience accessible at `/vr-tryon`. 
+
+### Getting Started with VR Try-On
+
+1. **Clone and run the project**:
+   ```sh
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   npm ci
+   npm run dev
+   ```
+
+2. **Navigate to VR Try-On**: Visit `http://localhost:5173/vr-tryon` in your browser
+
+3. **Environment Setup**: Make sure you have valid Supabase environment variables configured:
+   - The project uses Supabase for clothing item storage and user data
+   - Items are fetched from the `items` table with image URLs from Supabase storage
+
+### VR Usage
+
+**Browser Requirements**:
+- Chrome, Edge, or other WebXR-compatible browsers
+- HTTPS connection (required for WebXR in production)
+
+**VR Hardware Support**:
+- Oculus Quest/Quest 2
+- HTC Vive
+- Windows Mixed Reality headsets
+- Any WebXR-compatible VR device
+
+**Controls**:
+- **Mouse**: Look around the 3D scene
+- **WASD**: Move around the virtual space
+- **VR Mode**: Click "Enter VR" button when VR headset is connected
+
+### Features
+
+- **Avatar Selection**: Choose between two avatar models
+- **Clothing Application**: Click clothing items to apply them as textures on the avatar
+- **VR Immersion**: Full WebXR support for VR headsets
+- **Outfit Saving**: Save your virtual outfits to Supabase
+- **Responsive Design**: Works on desktop and mobile devices
+
+### Local Development Tips
+
+- **Testing VR locally**: Use `https://localhost:5173` (HTTPS required for WebXR)
+- **Avatar Models**: Replace placeholder files in `/public/avatars/` with actual .glb models
+- **Performance**: Keep avatar models under 5MB for optimal loading
+- **Clothing Assets**: Ensure clothing items in Supabase have valid `image_url` fields
+
+### Troubleshooting
+
+- **White screen**: Check browser console for Supabase connection errors
+- **VR not working**: Ensure HTTPS, WebXR-compatible browser, and connected VR device
+- **Items not loading**: Verify Supabase configuration and item table has data
+- **Performance issues**: Optimize GLB file sizes and reduce polygon count
 
 ## How can I deploy this project?
 
