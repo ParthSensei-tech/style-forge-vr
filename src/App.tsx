@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Upload from "./pages/Upload";
 import TryOn from "./pages/TryOn";
+import VrTryOn from "./pages/VrTryOn";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/auth" element={<Auth />} />
               <Route path="/upload" element={<Upload />} />
               <Route path="/try-on" element={<TryOn />} />
+              <Route path="/vr-try-on" element={<VrTryOn />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
